@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fotos</title>
+
+  <!-- LINK PRINCIPAL DO SEU CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Swiper CSS via CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">TFT Interprise</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="historia.html">Nossa História</a></li>
+        <li><a href="fotos.html">Fotos</a></li>
+        <li><a href="musicas.html">Músicas</a></li>
+        <li><a href="videos.html">Vídeos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="gallery-slider-section">
+      <h2>Nossos Momentos em Slides</h2>
+
+      <!-- Swiper -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="assets/images/foto1.jpg" alt="Foto 1" />
+            <div class="slide-caption">Nosso primeiro encontro</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/foto2.jpg" alt="Foto 2" />
+            <div class="slide-caption">Dia no parque</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/foto3.jpg" alt="Foto 3" />
+            <div class="slide-caption">Aniversário especial</div>
+          </div>
+          <!-- Adicione quantas .swiper-slide quiser -->
+        </div>
+
+        <!-- Botões de navegação -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- Paginação -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© TFT Interprise - Todos os direitos reservados</p>
+  </footer>
+
+  <!-- Swiper JS via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<main>
+  <section class="gallery-slider-section">
+    <h2>Nossos Momentos em Slides</h2>
+    
+    <!-- Swiper -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Cada .swiper-slide será uma imagem -->
+        <div class="swiper-slide">
+          <img src="assets/images/foto1.jpg" alt="Foto 1" />
+          <div class="slide-caption">Nosso primeiro encontro</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/foto2.jpg" alt="Foto 2" />
+          <div class="slide-caption">Dia no parque</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/foto3.jpg" alt="Foto 3" />
+          <div class="slide-caption">Aniversário especial</div>
+        </div>
+        <!-- Adicione mais .swiper-slide conforme precisar -->
+      </div>
+
+      <!-- Botões de navegação (opcionais) -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Paginação (bolinhas) -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+</main>
+
+  <!-- SEU script.js (digitação, observer, inicialização do Swiper, etc.) -->
+  <script src="script.js"></script>
+</body>
+</html>
