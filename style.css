@@ -324,6 +324,7 @@ footer {
 /* Reduz a imagem dentro do slide */
 .swiper-slide img {
   max-height: 300px;  /* controla altura da imagem */
+  max-width: 320px; /* reduz largura da imagem total */
   width: auto;
   object-fit: contain; /* garante que a imagem não estique */
   border-radius: 8px;
