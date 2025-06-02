@@ -1,0 +1,213 @@
+/* 1) RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2) BODY E FONTE GERAL */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #f0f0f0;
+  background-color: #0d0d0d; /* preto predominante */
+  line-height: 1.6;
+}
+
+/* 3) NAVBAR FIXA NO TOPO */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(26, 26, 26, 0.85); /* preto semi-opaco */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00bfa6; /* azul Tiffany */
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar nav ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+  color: #0fffe3; /* Tiffany mais claro */
+  text-decoration: underline;
+}
+
+/* 4) HERO FULL-SCREEN */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('assets/images/hero-bg.jpg') center center / cover no-repeat; /* substitua pela sua imagem */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 64px; /* para compensar a navbar fixa */
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* camada escura sobre a imagem */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 1rem 2rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: #00bfa6; /* Tiffany no título */
+  margin-bottom: 1rem;
+  white-space: nowrap; /* impede quebra de linha durante digitação */
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #00bfa6; /* Tiffany */
+  color: #0d0d0d;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.hero-content .btn:hover {
+  background-color: #0fffe3; /* Tiffany mais clara */
+}
+
+/* 5) INTRO SEÇÃO */
+.intro {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.intro .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00bfa6;
+}
+
+.intro p {
+  color: #d0d0d0;
+  font-size: 1.1rem;
+}
+
+/* 6) CARDS SECTION (ex: Fotos) */
+.cards-section {
+  padding: 4rem 1rem;
+  background-color: #111; /* leve diferença de fundo */
+}
+
+.cards-section .container h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #00bfa6;
+  text-align: center;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* CARD INDIVIDUAL */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.3s; }
+.card:nth-child(2) { animation-delay: 0.6s; }
+.card:nth-child(3) { animation-delay: 0.9s; }
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-overlay {
+  transform: translateY(0);
+}
+
+/* 7) RODAPÉ */
+footer {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 1rem 0;
+  color: #00bfa6;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+}
+
+/* 8) KEYFRAMES E ANIMAÇÕES */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 9) RESPONSIVO */
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 2rem; }
+  .cards-grid { grid-template-columns: 1fr; }
+}
