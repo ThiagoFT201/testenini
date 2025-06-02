@@ -51,40 +51,56 @@ body {
   text-decoration: underline;
 }
 
-/* 4) HERO FULL-SCREEN */
+/* HERO COM VÍDEO DE FUNDO */
 .hero {
   position: relative;
   height: 100vh;
-  background: url('assets/images/hero-bg.jpg') center center / cover no-repeat; /* substitua pela sua imagem */
+  width: 100%;
+  overflow: hidden;
+  margin-top: 64px; /* se a navbar for fixa de 64px de altura */
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  margin-top: 64px; /* para compensar a navbar fixa */
 }
 
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Overlay preto semitransparente por cima do vídeo */
 .hero .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* camada escura sobre a imagem */
+  background-color: rgba(0, 0, 0, 0.6); /* ajuste o alfa conforme preferir */
+  z-index: 2;
 }
 
+/* Conteúdo sobreposto ao vídeo */
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  text-align: center;
+  color: #00bfa6; /* Tiffany nos títulos */
+  padding: 0 1rem;
   max-width: 800px;
-  padding: 1rem 2rem;
 }
 
 .hero-content h1 {
   font-size: 2.5rem;
-  color: #00bfa6; /* Tiffany no título */
   margin-bottom: 1rem;
-  white-space: nowrap; /* impede quebra de linha durante digitação */
+  white-space: nowrap; /* evita quebra de linha enquanto digita */
 }
 
 .hero-content p {
@@ -96,7 +112,7 @@ body {
 .hero-content .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #00bfa6; /* Tiffany */
+  background-color: #00bfa6;
   color: #0d0d0d;
   text-decoration: none;
   font-weight: bold;
@@ -105,8 +121,16 @@ body {
 }
 
 .hero-content .btn:hover {
-  background-color: #0fffe3; /* Tiffany mais clara */
+  background-color: #0fffe3;
 }
+
+/* Ajuste responsivo do vídeo */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+
 
 /* 5) INTRO SEÇÃO */
 .intro {
