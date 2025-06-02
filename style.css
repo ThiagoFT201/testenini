@@ -315,6 +315,21 @@ footer {
   opacity: 1;
 }
 
+/* Reduz a altura do container do slider */
+.swiper-container {
+  max-width: 700px; /* reduz largura total */
+  height: 350px;    /* reduz altura */
+}
+
+/* Reduz a imagem dentro do slide */
+.swiper-slide img {
+  max-height: 300px;  /* controla altura da imagem */
+  width: auto;
+  object-fit: contain; /* garante que a imagem não estique */
+  border-radius: 8px;
+}
+
+
 /* Responsivo */
 @media (max-width: 768px) {
   .swiper-container {
