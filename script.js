@@ -46,3 +46,39 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(card);
   });
 });
+
+// == Inicialização do Swiper para o slider de fotos ==
+document.addEventListener("DOMContentLoaded", () => {
+  // Verifica se existe um container Swiper na página
+  const swiperContainer = document.querySelector(".swiper-container");
+  if (swiperContainer) {
+    const photoSwiper = new Swiper(".swiper-container", {
+      loop: true,            // repete infinitamente
+      speed: 600,            // velocidade de transição (ms)
+      autoplay: {
+        delay: 3000,         // 3 segundos entre slides
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      slidesPerView: 1,      // quantas imagens são exibidas por vez
+      spaceBetween: 20,      // espaçamento entre slides (px)
+      grabCursor: true,
+      effect: "slide",       // animação de slide; pode usar "fade" se quiser
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+        },
+        1024: {
+          slidesPerView: 1,
+        },
+      },
+    });
+  }
+});
