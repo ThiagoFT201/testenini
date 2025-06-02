@@ -22,15 +22,27 @@
     </nav>
   </header>
 
-  <!-- HERO FULL-SCREEN COM EFEITO DE DIGITAÇÃO -->
-  <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1 id="typed-hero">Quatro Anos de Amor e Aventura</h1>
-      <p>Celebrando cada momento juntos.</p>
-      <a href="historia.html" class="btn">Nossa História</a>
-    </div>
-  </section>
+  <!-- HERO FULL-SCREEN COM VÍDEO DE FUNDO -->
+<section class="hero">
+  <!-- Vídeo -->
+  <video class="hero-video" autoplay loop muted playsinline>
+    <source src="assets/videos/hero-video.mp4" type="video/mp4" />
+    <!-- Se quiser, adiciona WebM como fallback:
+    <source src="assets/videos/hero-video.webm" type="video/webm" />
+    -->
+  </video>
+
+  <!-- Overlay semitransparente para escurecer o vídeo -->
+  <div class="overlay"></div>
+
+  <!-- Conteúdo sobreposto -->
+  <div class="hero-content">
+    <h1 id="typed-hero">Quatro Anos de Amor e Aventura</h1>
+    <p>Celebrando cada momento juntos.</p>
+    <a href="historia.html" class="btn">Nossa História</a>
+  </div>
+</section>
+
 
   <!-- SEÇÃO DE INTRO (SEM IMAGEM) -->
   <section class="intro">
