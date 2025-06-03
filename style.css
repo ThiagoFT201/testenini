@@ -465,5 +465,32 @@ footer {
   cursor: pointer;
 }
 
+.swiper {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 10px #0abab5;
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.05);
+}
 
 
