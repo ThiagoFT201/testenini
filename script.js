@@ -82,3 +82,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+<script> 
+  function openFull(img) {
+    var modal = document.getElementById("imgModal");
+    var modalImg = document.getElementById("modalImg");
+    modal.style.display = "block";
+    modalImg.src = img.src;
+  }
+
+  function closeFull() {
+    document.getElementById("imgModal").style.display = "none";
+  }
+</script>
