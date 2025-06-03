@@ -95,3 +95,32 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("imgModal").style.display = "none";
   }
 </script>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    }
+  });
+
+  // Modal fullscreen
+  function openFull(img) {
+    var modal = document.getElementById("imgModal");
+    var modalImg = document.getElementById("modalImg");
+    modal.style.display = "block";
+    modalImg.src = img.src;
+  }
+
+  function closeFull() {
+    document.getElementById("imgModal").style.display = "none";
+  }
+</script>
