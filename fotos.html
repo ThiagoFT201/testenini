@@ -36,15 +36,15 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="cini1.jpg" alt="Foto 1" />
+            <img src="cini1.jpg" alt="Foto 1"  onclick="openFull(this)">
             <div class="slide-caption">Meu aniversário</div>
           </div>
           <div class="swiper-slide">
-            <img src="cini3.jpg" alt="Foto 2" />
+            <img src="cini3.jpg" alt="Foto 2"  onclick="openFull(this)">
             <div class="slide-caption">No terminal, nosso primeiro ponto de encontro</div>
           </div>
           <div class="swiper-slide">
-            <img src="cini5.jpg" alt="Foto 3" />
+            <img src="cini5.jpg" alt="Foto 3"  onclick="openFull(this)">
             <div class="slide-caption">NINI e NENA</div>
           </div>
           <!-- Adicione quantas .swiper-slide quiser -->
@@ -70,21 +70,23 @@
     <!-- Swiper -->
     <div class="swiper-container">
       <div class="swiper-wrapper">
+        <div class="swiper-slide">
         <!-- Cada .swiper-slide será uma imagem -->
         <div class="swiper-slide">
-          <img src="cini.jpg" alt="Foto 1" />
+          <img src="cini.jpg" alt="Foto 1"  onclick="openFull(this)">
           <div class="slide-caption">Na casa da tia de nini</div>
         </div>
         <div class="swiper-slide">
-          <img src="cini2.jpg" alt="Foto 2" />
+          <img src="cini2.jpg" alt="Foto 2"  onclick="openFull(this)">
           <div class="slide-caption">Aqui em casinha</div>
         </div>
         <div class="swiper-slide">
-          <img src="cini4.jpg" alt="Foto 3" />
+          <img src="cini4.jpg" alt="Foto 3"  onclick="openFull(this)">
           <div class="slide-caption">Aniversário da prima de nini</div>
         </div>
         <!-- Adicione mais .swiper-slide conforme precisar -->
       </div>
+      
 
       <!-- Botões de navegação (opcionais) -->
       <div class="swiper-button-next"></div>
@@ -93,8 +95,16 @@
       <!-- Paginação (bolinhas) -->
       <div class="swiper-pagination"></div>
     </div>
+      <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
   </section>
 </main>
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
 
   <footer>
     <p>© TFT Enterprise - Todos os direitos reservados</p>
