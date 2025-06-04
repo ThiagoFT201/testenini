@@ -52,42 +52,45 @@
     </div>
   </section>
 
-  <!-- SEÇÃO DE CARDS (ex: Fotos) -->
-  <section class="cards-section">
-    <div class="container">
-      <h2>Momentos Em Cartões</h2>
-      <div class="cards-grid">
-        <div class="card fade-in-card">
-          <img src="ola.jpg" alt="Foto 1" onclick="openFull(this)"/>
-          <div class="card-overlay">
-            <h3>Nosso Primeiro Encontro</h3>
-          </div>
+<!-- SEÇÃO DE CARDS (ex: Fotos) -->
+<section class="cards-section">
+  <div class="container">
+    <h2>Momentos Em Cartões</h2>
+
+    <!-- VÍDEO DO YOUTUBE COM MOLDURA -->
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/SEU_VIDEO_ID_AQUI"
+        title="Vídeo especial"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card fade-in-card">
+        <img src="ola.jpg" alt="Foto 1" onclick="openFull(this)" />
+        <div class="card-overlay">
+          <h3>Em Curitiba</h3>
         </div>
-        <div class="card fade-in-card">
-          <img src="ola1.jpg" alt="Foto 2" onclick="openFull(this)"/>
-          <div class="card-overlay">
-            <h3>Passeio No Parque</h3>
-          </div>
+      </div>
+      <div class="card fade-in-card">
+        <img src="ola1.jpg" alt="Foto 2" onclick="openFull(this)" />
+        <div class="card-overlay">
+          <h3>Em Águas Claras</h3>
         </div>
-        <div class="card fade-in-card">
-          <img src="ola2.jpg" alt="Foto 3" onclick="openFull(this)"/>
-          <div class="card-overlay">
-            <h3>Aniversário Especial</h3>
-          </div>
+      </div>
+      <div class="card fade-in-card">
+        <img src="ola2.jpg" alt="Foto 3" onclick="openFull(this)" />
+        <div class="card-overlay">
+          <h3>Na Praia</h3>
         </div>
       </div>
     </div>
-  </section>
-  
-  <!-- Modal de imagem -->
-<div id="imgModal" class="modal" onclick="closeFull()">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modalImg">
-</div>
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-/>
+  </div>
+</section>
+
 
   <!-- RODAPÉ -->
   <footer>
