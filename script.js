@@ -1,10 +1,9 @@
-// 1) Efeito de Digitação para o Hero (quando a página carrega)
-//    O texto já deve estar completo em <h1 id="typed-hero">No HTML</h1>
+// Efeito de digitação para o Hero
 function typeEffect(elementId, text, speed = 50) {
   const el = document.getElementById(elementId);
   if (!el) return;
 
-  el.textContent = ""; // limpa antes de digitar
+  el.textContent = "";
   let i = 0;
   const interval = setInterval(() => {
     if (i < text.length) {
@@ -17,7 +16,6 @@ function typeEffect(elementId, text, speed = 50) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  // Texto original no HTML:
   const heroEl = document.getElementById("typed-hero");
   if (heroEl) {
     const fullText = heroEl.textContent.trim();
@@ -25,13 +23,13 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// 2) Animação de cards com IntersectionObserver (revelar ao rolar)
-//    Para garantir que as cards façam fade-in quando ficarem visíveis
+// Animação de fade-in nos cards usando IntersectionObserver
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".fade-in-card");
   const observerOptions = {
     threshold: 0.2
   };
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -47,16 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// == Inicialização do Swiper para o slider de fotos ==
+// Inicializa Swiper para o slider de fotos
 document.addEventListener("DOMContentLoaded", () => {
-  // Verifica se existe um container Swiper na página
   const swiperContainer = document.querySelector(".swiper-container");
   if (swiperContainer) {
-    const photoSwiper = new Swiper(".swiper-container", {
-      loop: true,            // repete infinitamente
-      speed: 600,            // velocidade de transição (ms)
+    new Swiper(".swiper-container", {
+      loop: true,
+      speed: 600,
       autoplay: {
-        delay: 3000,         // 3 segundos entre slides
+        delay: 3000,
         disableOnInteraction: false,
       },
       navigation: {
@@ -67,10 +64,10 @@ document.addEventListener("DOMContentLoaded", () => {
         el: ".swiper-pagination",
         clickable: true,
       },
-      slidesPerView: 1,      // quantas imagens são exibidas por vez
-      spaceBetween: 20,      // espaçamento entre slides (px)
+      slidesPerView: 1,
+      spaceBetween: 20,
       grabCursor: true,
-      effect: "slide",       // animação de slide; pode usar "fade" se quiser
+      effect: "slide",
       breakpoints: {
         768: {
           slidesPerView: 1,
@@ -83,34 +80,27 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
-</script>
-<script>
-  const swiper = new Swiper(".mySwiper", {
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    }
-  });
-
-  // Modal fullscreen
-  function openFull(img) {
-    var modal = document.getElementById("imgModal");
-    var modalImg = document.getElementById("modalImg");
+// Modal fullscreen para imagens
+function openFull(img) {
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  if (modal && modalImg) {
     modal.style.display = "block";
     modalImg.src = img.src;
   }
+}
 
-  function closeFull() {
-    document.getElementById("imgModal").style.display = "none";
+function closeFull() {
+  const modal = document.getElementById("imgModal");
+  if (modal) {
+    modal.style.display = "none";
   }
-</script>
+}
+
+// Fecha o modal ao clicar fora da imagem
+document.addEventListener("click", (event) => {
+  const modal = document.getElementById("imgModal");
+  if (modal && event.target === modal) {
+    modal.style.display = "none";
+  }
+});
