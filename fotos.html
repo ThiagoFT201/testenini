@@ -28,41 +28,6 @@
     </nav>
   </header>
 
-  <main>
-    <section class="gallery-slider-section">
-      <h2>Nossos Momentos em Slides</h2>
-
-      <!-- Swiper -->
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="cini1.jpg" alt="Foto 1"  onclick="openFull(this)">
-            <div class="slide-caption">Meu aniversário</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="cini3.jpg" alt="Foto 2"  onclick="openFull(this)">
-            <div class="slide-caption">No terminal, nosso primeiro ponto de encontro</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="cini5.jpg" alt="Foto 3"  onclick="openFull(this)">
-            <div class="slide-caption">NINI e NENA</div>
-          </div>
-          <!-- Adicione quantas .swiper-slide quiser -->
-        </div>
-
-        <!-- Botões de navegação -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-
-        <!-- Paginação -->
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
-  </main>
-
-
-  <!-- Swiper JS via CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <main>
   <section class="gallery-slider-section">
     <h2>Nossos Momentos em Slides</h2>
@@ -71,37 +36,41 @@
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-        <!-- Cada .swiper-slide será uma imagem -->
+          <img src="cini1.jpg" alt="Foto 1" onclick="openFull(this)">
+          <div class="slide-caption">Meu aniversário</div>
+        </div>
         <div class="swiper-slide">
-          <img src="cini.jpg" alt="Foto 1"  onclick="openFull(this)">
+          <img src="cini3.jpg" alt="Foto 2" onclick="openFull(this)">
+          <div class="slide-caption">No terminal, nosso primeiro ponto de encontro</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="cini5.jpg" alt="Foto 3" onclick="openFull(this)">
+          <div class="slide-caption">NINI e NENA</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="cini.jpg" alt="Foto 4" onclick="openFull(this)">
           <div class="slide-caption">Na casa da tia de nini</div>
         </div>
         <div class="swiper-slide">
-          <img src="cini2.jpg" alt="Foto 2"  onclick="openFull(this)">
+          <img src="cini2.jpg" alt="Foto 5" onclick="openFull(this)">
           <div class="slide-caption">Aqui em casinha</div>
         </div>
         <div class="swiper-slide">
-          <img src="cini4.jpg" alt="Foto 3"  onclick="openFull(this)">
+          <img src="cini4.jpg" alt="Foto 6" onclick="openFull(this)">
           <div class="slide-caption">Aniversário da prima de nini</div>
         </div>
-        <!-- Adicione mais .swiper-slide conforme precisar -->
       </div>
-      
 
-      <!-- Botões de navegação (opcionais) -->
+      <!-- Botões de navegação -->
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
 
-      <!-- Paginação (bolinhas) -->
+      <!-- Paginação -->
       <div class="swiper-pagination"></div>
     </div>
-      <!-- Swiper CSS -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
   </section>
 </main>
+
 
   <div id="imgModal" class="modal" onclick="closeFull()">
   <span class="close">&times;</span>
