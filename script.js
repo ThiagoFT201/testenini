@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
     typeEffect("typed-hero", fullText, 70);
   }
 
-  // Animação de cards ao rolar
+  // Animação fade-in para elementos com classe .fade-in-card
   const cards = document.querySelectorAll(".fade-in-card");
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -35,7 +35,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   cards.forEach(card => observer.observe(card));
 
-  // Swiper
+  // Swiper (caso esteja presente na página)
   const swiperContainer = document.querySelector(".swiper");
   if (swiperContainer) {
     new Swiper(".swiper", {
@@ -59,14 +59,27 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Modal
+// Modal fullscreen
 function openFull(img) {
   const modal = document.getElementById("imgModal");
   const modalImg = document.getElementById("modalImg");
-  modal.style.display = "block";
-  modalImg.src = img.src;
+  if (modal && modalImg) {
+    modal.style.display = "block";
+    modalImg.src = img.src;
+  }
 }
 
 function closeFull() {
-  document.getElementById("imgModal").style.display = "none";
+  const modal = document.getElementById("imgModal");
+  if (modal) {
+    modal.style.display = "none";
+  }
 }
+
+// Fecha modal ao clicar fora da imagem
+document.addEventListener("click", (e) => {
+  const modal = document.getElementById("imgModal");
+  if (modal && e.target === modal) {
+    modal.style.display = "none";
+  }
+});
