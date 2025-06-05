@@ -1,8 +1,7 @@
-// Efeito de digitação no título
+// Digitação no Hero
 function typeEffect(elementId, text, speed = 50) {
   const el = document.getElementById(elementId);
   if (!el) return;
-
   el.textContent = "";
   let i = 0;
   const interval = setInterval(() => {
@@ -15,14 +14,14 @@ function typeEffect(elementId, text, speed = 50) {
   }, speed);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", () => {
   const heroEl = document.getElementById("typed-hero");
   if (heroEl) {
     const fullText = heroEl.textContent.trim();
     typeEffect("typed-hero", fullText, 70);
   }
 
-  // Fade-in para os cards
+  // Animação de cards ao rolar
   const cards = document.querySelectorAll(".fade-in-card");
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -36,12 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   cards.forEach(card => observer.observe(card));
 
-  // Swiper (caso esteja usando)
-  const swiperContainer = document.querySelector(".swiper-container");
+  // Swiper
+  const swiperContainer = document.querySelector(".swiper");
   if (swiperContainer) {
-    new Swiper(".swiper-container", {
+    new Swiper(".swiper", {
       loop: true,
-      speed: 600,
       autoplay: {
         delay: 3000,
         disableOnInteraction: false
@@ -61,10 +59,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Modal de imagem
+// Modal
 function openFull(img) {
-  var modal = document.getElementById("imgModal");
-  var modalImg = document.getElementById("modalImg");
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
   modal.style.display = "block";
   modalImg.src = img.src;
 }
