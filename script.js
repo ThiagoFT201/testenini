@@ -1,4 +1,4 @@
-// Efeito de digitação para o Hero
+// Efeito de digitação no título
 function typeEffect(elementId, text, speed = 50) {
   const el = document.getElementById(elementId);
   if (!el) return;
@@ -15,21 +15,15 @@ function typeEffect(elementId, text, speed = 50) {
   }, speed);
 }
 
-window.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const heroEl = document.getElementById("typed-hero");
   if (heroEl) {
     const fullText = heroEl.textContent.trim();
     typeEffect("typed-hero", fullText, 70);
   }
-});
 
-// Animação de fade-in nos cards usando IntersectionObserver
-document.addEventListener("DOMContentLoaded", () => {
+  // Fade-in para os cards
   const cards = document.querySelectorAll(".fade-in-card");
-  const observerOptions = {
-    threshold: 0.2
-  };
-
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -38,15 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.unobserve(entry.target);
       }
     });
-  }, observerOptions);
+  }, { threshold: 0.2 });
 
-  cards.forEach(card => {
-    observer.observe(card);
-  });
-});
+  cards.forEach(card => observer.observe(card));
 
-// Inicializa Swiper para o slider de fotos
-document.addEventListener("DOMContentLoaded", () => {
+  // Swiper (caso esteja usando)
   const swiperContainer = document.querySelector(".swiper-container");
   if (swiperContainer) {
     new Swiper(".swiper-container", {
@@ -54,53 +44,31 @@ document.addEventListener("DOMContentLoaded", () => {
       speed: 600,
       autoplay: {
         delay: 3000,
-        disableOnInteraction: false,
+        disableOnInteraction: false
       },
       navigation: {
         nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        prevEl: ".swiper-button-prev"
       },
       pagination: {
         el: ".swiper-pagination",
-        clickable: true,
+        clickable: true
       },
       slidesPerView: 1,
       spaceBetween: 20,
-      grabCursor: true,
-      effect: "slide",
-      breakpoints: {
-        768: {
-          slidesPerView: 1,
-        },
-        1024: {
-          slidesPerView: 1,
-        },
-      },
+      grabCursor: true
     });
   }
 });
 
-// Modal fullscreen para imagens
+// Modal de imagem
 function openFull(img) {
-  const modal = document.getElementById("imgModal");
-  const modalImg = document.getElementById("modalImg");
-  if (modal && modalImg) {
-    modal.style.display = "block";
-    modalImg.src = img.src;
-  }
+  var modal = document.getElementById("imgModal");
+  var modalImg = document.getElementById("modalImg");
+  modal.style.display = "block";
+  modalImg.src = img.src;
 }
 
 function closeFull() {
-  const modal = document.getElementById("imgModal");
-  if (modal) {
-    modal.style.display = "none";
-  }
+  document.getElementById("imgModal").style.display = "none";
 }
-
-// Fecha o modal ao clicar fora da imagem
-document.addEventListener("click", (event) => {
-  const modal = document.getElementById("imgModal");
-  if (modal && event.target === modal) {
-    modal.style.display = "none";
-  }
-});
