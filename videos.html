@@ -1,122 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vídeos Especiais</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      background-color: #111;
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #0abab5;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      animation: fadeIn 1s ease-in;
-    }
-
-    .typed-text {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-      color: #0abab5;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 3px solid;
-      width: 0;
-      animation: typing 3s steps(40, end) forwards, blink 0.7s step-end infinite;
-    }
-
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0 }
-      to { opacity: 1 }
-    }
-
-    .video-frame {
-      margin: 1.5rem 0;
-      text-align: center;
-    }
-
-    .video-frame iframe {
-      width: 100%;
-      max-width: 700px;
-      height: 400px;
-      border-radius: 12px;
-      border: none;
-      box-shadow: 0 0 15px #0abab5;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #0abab5;
-      color: #111;
-      font-size: 0.9rem;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vídeos</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Vídeos Especiais</h1>
+  <header class="navbar">
+    <div class="logo">TFT Enterprise</div>
     <nav>
-      <a href="index.html">Início</a>
-      <a href="historia.html">História</a>
-      <a href="fotos.html">Fotos</a>
-      <a href="musicas.html">Músicas</a>
-      <a href="videos.html">Vídeos</a>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="historia.html">Histórias</a></li>
+        <li><a href="fotos.html">Fotos</a></li>
+        <li><a href="musicas.html">Músicas</a></li>
+        <li><a href="videos.html">Vídeos</a></li>
+      </ul>
     </nav>
   </header>
 
-  <div class="container">
-    <div class="typed-text">Nossos momentos em vídeo...</div>
+  <main class="container">
+    <h1 class="intro">Vídeos Especiais</h1>
 
-    <div class="video-frame">
-      <iframe src="https://www.youtube.com/embed/SEU_VIDEO_1" allowfullscreen></iframe>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/SEU_VIDEO_1" title="Vídeo 1" frameborder="0" allowfullscreen></iframe>
     </div>
 
-    <div class="video-frame">
-      <iframe src="https://www.youtube.com/embed/SEU_VIDEO_2" allowfullscreen></iframe>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/SEU_VIDEO_2" title="Vídeo 2" frameborder="0" allowfullscreen></iframe>
     </div>
 
-<!-- Substitua SEU_VIDEO_1 e SEU_VIDEO_2 com os IDs dos seus vídeos do YouTube (ex: se o link for https://www.youtube.com/watch?v=abc123, o ID é abc123).
- Pode adicionar quantos vídeos quiser copiando mais blocos <div class="video-frame">...</div> */-->
-    
-    <!-- Adicione mais vídeos copiando e colando a estrutura acima -->
-  </div>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/SEU_VIDEO_3" title="Vídeo 3" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </main>
 
   <footer>
-    © 2025 TFT Enterprise - Todos os direitos reservados
+    <p>© TFT Enterprise - Todos os direitos reservados</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
