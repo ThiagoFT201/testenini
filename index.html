@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nosso Amor – 4 Anos</title>
+  <title>4 Anos de Amor</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 <body>
-
-  <!-- NAVBAR FIXA -->
   <header class="navbar">
     <div class="logo">TFT Enterprise</div>
     <nav>
@@ -22,29 +21,20 @@
     </nav>
   </header>
 
-  <!-- HERO FULL-SCREEN COM VÍDEO DE FUNDO -->
-<section class="hero">
-  <!-- Vídeo -->
-  <video class="hero-video" autoplay loop muted playsinline>
-    <source src="assets/videos/hero-video.mp4" type="video/mp4" />
-    <!-- Se quiser, adiciona WebM como fallback:
-    <source src="assets/videos/hero-video.webm" type="video/webm" />
-    -->
-  </video>
+  <!-- HERO FULLSCREEN COM VÍDEO DE FUNDO -->
+  <section class="hero">
+    <video class="hero-video" autoplay loop muted playsinline>
+      <source src="assets/videos/hero-video.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1 id="typed-hero">Quatro Anos de Amor e Aventura</h1>
+      <p>Celebrando cada momento juntos.</p>
+      <a href="historia.html" class="btn">Nossa História</a>
+    </div>
+  </section>
 
-  <!-- Overlay semitransparente para escurecer o vídeo -->
-  <div class="overlay"></div>
-
-  <!-- Conteúdo sobreposto -->
-  <div class="hero-content">
-    <h1 id="typed-hero">Quatro Anos de Amor e Aventura</h1>
-    <p>Celebrando cada momento juntos.</p>
-    <a href="historia.html" class="btn">Nossa História</a>
-  </div>
-</section>
-
-
-  <!-- SEÇÃO DE INTRO (SEM IMAGEM) -->
+  <!-- SEÇÃO DE INTRO -->
   <section class="intro">
     <div class="container">
       <h2>4 anos de uma linda jornada</h2>
@@ -52,55 +42,56 @@
     </div>
   </section>
 
-<!-- SEÇÃO DE CARDS (ex: Fotos) -->
-<section class="cards-section">
-  <div class="container">
-    <h2>Momentos Em Cartões</h2>
+  <!-- SEÇÃO DE CARDS COM VÍDEO -->
+  <section class="cards-section">
+    <div class="container">
+      <h2>Momentos Em Cartões</h2>
 
-    <!-- VÍDEO DO YOUTUBE COM MOLDURA -->
-    <div class="video-wrapper">
-      <iframe
-        src="https://www.youtube.com/embed/SEU_VIDEO_ID_AQUI"
-        title="Vídeo especial"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/SEU_VIDEO_ID"
+          title="Vídeo especial"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
 
-    <div class="cards-grid">
-      <div class="card fade-in-card">
-        <img src="ola.jpg" alt="Foto 1" onclick="openFull(this)" />
-        <div class="card-overlay">
-          <h3>Em Curitiba</h3>
+      <div class="cards-grid">
+        <div class="card fade-in-card">
+          <img src="ola.jpg" alt="Foto 1" onclick="openFull(this)" />
+          <div class="card-overlay">
+            <h3>Em Curitiba</h3>
+          </div>
         </div>
-      </div>
-      <div class="card fade-in-card">
-        <img src="ola1.jpg" alt="Foto 2" onclick="openFull(this)" />
-        <div class="card-overlay">
-          <h3>Em Águas Claras</h3>
+        <div class="card fade-in-card">
+          <img src="ola1.jpg" alt="Foto 2" onclick="openFull(this)" />
+          <div class="card-overlay">
+            <h3>Em Águas Claras</h3>
+          </div>
         </div>
-      </div>
-      <div class="card fade-in-card">
-        <img src="ola2.jpg" alt="Foto 3" onclick="openFull(this)" />
-        <div class="card-overlay">
-          <h3>Na Praia</h3>
+        <div class="card fade-in-card">
+          <img src="ola2.jpg" alt="Foto 3" onclick="openFull(this)" />
+          <div class="card-overlay">
+            <h3>Na Praia</h3>
+          </div>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- MODAL PARA IMAGENS -->
+  <div id="imgModal" class="modal" onclick="closeFull()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
   </div>
-</section>
-
 
   <!-- RODAPÉ -->
   <footer>
     <p>© TFT Enterprise – Todos os direitos reservados</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="script.js"></script>
-
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
