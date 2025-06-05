@@ -4,12 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fotos</title>
-
-  <!-- CSS PRINCIPAL -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Swiper CSS via CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 <body>
   <header class="navbar">
@@ -25,128 +21,47 @@
     </nav>
   </header>
 
-  <main>
-    <section class="gallery-slider-section">
-      <h2>Nossos Momentos em Slides</h2>
+  <main class="container">
+    <h2 class="intro">Nossos Momentos em Slides</h2>
 
-      <!-- Swiper -->
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="cini1.jpg" alt="Foto 1" onclick="openFull(this)">
-            <div class="slide-caption">Meu aniversário</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="cini3.jpg" alt="Foto 2" onclick="openFull(this)">
-            <div class="slide-caption">No terminal, nosso primeiro ponto de encontro</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="cini5.jpg" alt="Foto 3" onclick="openFull(this)">
-            <div class="slide-caption">NINI e NENA</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="cini.jpg" alt="Foto 4" onclick="openFull(this)">
-            <div class="slide-caption">Na casa da tia de nini</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="cini2.jpg" alt="Foto 5" onclick="openFull(this)">
-            <div class="slide-caption">Aqui em casinha</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="cini4.jpg" alt="Foto 6" onclick="openFull(this)">
-            <div class="slide-caption">Aniversário da prima de nini</div>
-          </div>
+    <div class="swiper swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="cini1.jpg" alt="Foto 1" onclick="openFull(this)">
         </div>
-
-        <!-- Botões de navegação -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-
-        <!-- Paginação -->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-slide">
+          <img src="cini3.jpg" alt="Foto 2" onclick="openFull(this)">
+        </div>
+        <div class="swiper-slide">
+          <img src="cini5.jpg" alt="Foto 3" onclick="openFull(this)">
+        </div>
+        <div class="swiper-slide">
+          <img src="cini.jpg" alt="Foto 4" onclick="openFull(this)">
+        </div>
+        <div class="swiper-slide">
+          <img src="cini2.jpg" alt="Foto 5" onclick="openFull(this)">
+        </div>
+        <div class="swiper-slide">
+          <img src="cini4.jpg" alt="Foto 6" onclick="openFull(this)">
+        </div>
       </div>
-    </section>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
   </main>
 
-  <!-- Modal de Imagem -->
+  <!-- MODAL PARA IMAGENS -->
   <div id="imgModal" class="modal" onclick="closeFull()">
     <span class="close">&times;</span>
     <img class="modal-content" id="modalImg">
   </div>
 
-  <!-- Modal CSS -->
-  <style>
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      padding-top: 60px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.95);
-    }
-
-    .modal-content {
-      margin: auto;
-      display: block;
-      max-width: 90%;
-      max-height: 80vh;
-      border-radius: 10px;
-      box-shadow: 0 0 20px #0abab5;
-    }
-
-    .close {
-      position: absolute;
-      top: 30px;
-      right: 50px;
-      color: white;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-  </style>
-
-  <!-- Swiper JS via CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-  <!-- Inicialização correta do Swiper -->
-  <script>
-    const swiper = new Swiper('.swiper-container', {
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false
-      }
-    });
-
-    // Modal - ver imagem em tela cheia
-    function openFull(img) {
-      const modal = document.getElementById("imgModal");
-      const modalImg = document.getElementById("modalImg");
-      modal.style.display = "block";
-      modalImg.src = img.src;
-    }
-
-    function closeFull() {
-      document.getElementById("imgModal").style.display = "none";
-    }
-  </script>
-
-  <!-- Seu script adicional (opcional) -->
-  <script src="script.js"></script>
-
   <footer>
     <p>© TFT Enterprise - Todos os direitos reservados</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
