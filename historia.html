@@ -1,104 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nossa História</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      background-color: #111;
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #0abab5; /* azul tiffany */
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      animation: fadeIn 1s ease-in;
-    }
-
-    .typed-text {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-      color: #0abab5;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 3px solid;
-      width: 0;
-      animation: typing 3s steps(40, end) forwards, blink .7s step-end infinite;
-    }
-
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0 }
-      to { opacity: 1 }
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #0abab5;
-      color: #111;
-      font-size: 0.9rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Nossa História</h1>
+  <header class="navbar">
+    <div class="logo">TFT Enterprise</div>
     <nav>
-      <a href="index.html">Início</a>
-      <a href="historia.html">Histórias</a>
-      <a href="fotos.html">Fotos</a>
-      <a href="musicas.html">Músicas</a>
-      <a href="videos.html">Vídeos</a>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="historia.html">Histórias</a></li>
+        <li><a href="fotos.html">Fotos</a></li>
+        <li><a href="musicas.html">Músicas</a></li>
+        <li><a href="videos.html">Vídeos</a></li>
+      </ul>
     </nav>
   </header>
 
-  <div class="container">
-    <div class="typed-text">Tudo começou em um dia especial...</div>
+  <main class="container">
+    <h1 class="intro">Nossa História</h1>
     <p>
-      Era uma vez dois corações que se encontraram por acaso, mas desde então nunca mais se separaram. 
-      Esta história é feita de momentos simples, risadas compartilhadas, olhares que dizem tudo, 
-      e um amor que só cresce com o tempo. Cada capítulo que vivemos é único, cada memória é um tesouro.
+      Desde o nosso primeiro encontro, tudo mudou. Foi como se o tempo parasse e o mundo se resumisse a nós dois. Cada momento que passamos juntos ficou marcado no meu coração.
     </p>
     <p>
-      Desde nosso primeiro encontro até os sonhos que planejamos juntos, cada passo foi mágico.
-      Esta página é dedicada a lembrar tudo que já passamos — os dias bons, os aprendizados, e o carinho que só a gente entende.
+      Lembro do seu sorriso, do nosso primeiro abraço, das conversas longas e dos planos de um futuro lindo. Cada passo da nossa jornada me mostrou que você é o amor da minha vida.
     </p>
-  </div>
+    <p>
+      Hoje, comemoramos 4 anos. Quatro anos de cumplicidade, superações, carinho e amor verdadeiro. Que venham muitos outros anos ao seu lado. Te amo!
+    </p>
+  </main>
 
   <footer>
-    © 2025 TFT Enterprise - Todos os direitos reservados
+    <p>© TFT Enterprise - Todos os direitos reservados</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
