@@ -352,3 +352,41 @@ footer {
   text-decoration: none;
   cursor: pointer;
 }
+
+
+.swiper-container {
+  max-width: 400px; /* ajuste o tamanho máximo */
+  height: auto;
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #0abab5;
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .swiper-container {
+    max-width: 90vw;
+  }
+
+  .swiper-slide img {
+    max-height: 300px;
+  }
+}
