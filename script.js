@@ -83,3 +83,27 @@ document.addEventListener("click", (e) => {
     modal.style.display = "none";
   }
 });
+
+function openFull(img) {
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  if (modal && modalImg) {
+    modal.style.display = "block";
+    modalImg.src = img.src;
+  }
+}
+
+function closeFull() {
+  const modal = document.getElementById("imgModal");
+  if (modal) {
+    modal.style.display = "none";
+  }
+}
+
+// Fecha modal ao clicar fora da imagem
+document.addEventListener("click", (e) => {
+  const modal = document.getElementById("imgModal");
+  if (modal && e.target === modal) {
+    modal.style.display = "none";
+  }
+});
