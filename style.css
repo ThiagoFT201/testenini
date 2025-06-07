@@ -279,3 +279,39 @@ footer {
   margin: auto;
   word-wrap: break-word;
 }
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.nav-horizontal {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-horizontal li {
+  margin: 0 15px;
+}
+
+.nav-horizontal li a {
+  text-decoration: none;
+  color: #00bfa6;
+  font-weight: bold;
+}
+
+.nav-horizontal li a:hover {
+  color: #0fffe3;
+}
