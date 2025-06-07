@@ -1,4 +1,4 @@
-// Digitação no Hero
+// ===== Efeito de Digitação =====
 function typeEffect(elementId, text, speed = 50) {
   const el = document.getElementById(elementId);
   if (!el) return;
@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
     typeEffect("typed-hero", fullText, 70);
   }
 
-  // Animação fade-in para elementos com classe .fade-in-card
+  // ===== Animação de Fade-in nos Cards =====
   const cards = document.querySelectorAll(".fade-in-card");
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -35,7 +35,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   cards.forEach(card => observer.observe(card));
 
-  // Swiper (caso esteja presente na página)
+  // ===== Inicializar Swiper (se existir na página) =====
   const swiperContainer = document.querySelector(".swiper");
   if (swiperContainer) {
     new Swiper(".swiper", {
@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Modal fullscreen
+// ===== Modal Fullscreen =====
 function openFull(img) {
   const modal = document.getElementById("imgModal");
   const modalImg = document.getElementById("modalImg");
