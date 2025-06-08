@@ -231,18 +231,27 @@ footer {
   margin-top: 2rem;
   position: relative;
   clear: both;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: space-between;
-
+  
 }
+
 @media (max-width: 768px) {
   footer {
     font-size: 0.8rem;
     padding: 1rem 0;
     margin-top: 2rem;
   }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 
@@ -312,10 +321,14 @@ footer {
 
 .nav-horizontal {
   display: flex;
+  flex-wrap: wrap;           /* permite quebrar linha se necessário */,
   justify-content: center;
+  align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
+  gap: 0.5rem;
+  width: 100%;
 }
 
 .nav-horizontal li {
@@ -326,6 +339,9 @@ footer {
   text-decoration: none;
   color: #00bfa6;
   font-weight: bold;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  white-space: nowrap; /* impede quebra dentro do botão */
 }
 
 .nav-horizontal li a:hover {
