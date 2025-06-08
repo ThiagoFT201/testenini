@@ -323,7 +323,7 @@ main {
 
 .nav-horizontal {
   display: flex;
-  flex-wrap: wrap;           /* permite quebrar linha se necessário */,
+  flex-wrap: wrap;           /* permite quebrar linha se necessário */
   justify-content: center;
   align-items: center;
   list-style: none;
