@@ -5,12 +5,13 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #0d0d0d;
-  color: #f0f0f0;
-  line-height: 1.6;
-  overflow-x: hidden;
+/* Garante que o body sempre ocupe a altura total da tela */
+html, body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ===== NAVBAR ===== */
@@ -403,6 +404,7 @@ h1.intro, #typed-hero {
 }
 
 /* ===== RODAPÉ ===== */
+/* Rodapé sempre no final e sem travar */
 footer {
   background-color: #1a1a1a;
   color: #00bfa6;
@@ -424,18 +426,7 @@ footer {
 
 }
 
-html {
-  height: 100%;
-}
-
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
 
 main {
-  flex: 1;
-  padding-bottom: 2rem; /* garante espaço pro footer não sobrepor */
+  flex: 1; /* Faz o main ocupar todo o espaço disponível */
 }
