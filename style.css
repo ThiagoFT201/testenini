@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+/* BODY */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #f0f0f0;
+  background-color: #0d0d0d;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
 /* Garante que o body sempre ocupe a altura total da tela */
 html, body {
   min-height: 100vh;
