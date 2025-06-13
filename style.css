@@ -220,46 +220,6 @@ h1.intro, #typed-hero {
   cursor: pointer;
 }
 
-/* ===== RODAPÉ ===== */
-footer {
-  flex-shrink: 0;
-  background-color: #1a1a1a;
-  color: #00bfa6;
-  text-align: center;
-  padding: 1rem 0;
-  font-size: 0.9rem;
-  position: relative;
-  width: 100%;
-  margin-top: auto;
-}
-
-
-@media (max-width: 768px) {
-  footer {
-    font-size: 0.8rem;
-    padding: 1rem 0;
-    margin-top: 2rem;
-  }
-
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1 0 auto; /* ocupa o espaço restante */
-}
 
 
 
@@ -340,21 +300,32 @@ main {
 }
 
 .nav-horizontal li {
-  margin: 0 15px;
+  margin: 0;
 }
 
 .nav-horizontal li a {
+ display: inline-block;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   color: #00bfa6;
   font-weight: bold;
-  padding: 0.5rem 1rem;
-  display: inline-block;
-  white-space: nowrap; /* impede quebra dentro do botão */
+  white-space: nowrap;      /* impede quebra do texto */
+  border-radius: 4px;
 }
 
 .nav-horizontal li a:hover {
   color: #0fffe3;
 }
+
+@media (max-width: 768px) {
+  .navbar nav ul.nav-horizontal {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* aqui pra baixo é modal */
 
 .modal {
   display: none;
@@ -429,4 +400,45 @@ main {
   .swiper-slide img {
     max-height: 300px;
   }
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  flex-shrink: 0;
+  background-color: #1a1a1a;
+  color: #00bfa6;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  position: relative;
+  width: 100%;
+  margin-top: auto;
+}
+
+
+@media (max-width: 768px) {
+  footer {
+    font-size: 0.8rem;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto; /* ocupa o espaço restante */
 }
