@@ -404,15 +404,14 @@ h1.intro, #typed-hero {
 
 /* ===== RODAPÉ ===== */
 footer {
-flex-shrink: 0;       /* Impede o footer de encolher */
   background-color: #1a1a1a;
   color: #00bfa6;
   text-align: center;
   padding: 1rem 0;
   font-size: 0.9rem;
-  position: relative;   /* NÃO usar fixed, absolute ou sticky */
   width: 100%;
-  margin-top: auto;     /* Faz o footer “grudar” no final da página */
+  margin-top: auto;
+  position: relative;
 }
 
 
@@ -425,20 +424,18 @@ flex-shrink: 0;       /* Impede o footer de encolher */
 
 }
 
-html, body {
+html {
   height: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
 }
 
 
 body {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 main {
-  flex: 1 0 auto; /* ocupa o espaço restante */
+  flex: 1;
+  padding-bottom: 2rem; /* garante espaço pro footer não sobrepor */
 }
