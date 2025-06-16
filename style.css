@@ -391,6 +391,55 @@ h1.intro, #typed-hero {
   line-height: 1.8;
 }
 
+
+/* ===== NEVE TESTE ===== */
+.snow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+E adicione o seguinte código JavaScript ao seu arquivo script.js:
+
+function createSnowflake() {
+  const snowflake = document.createElement('div');
+  snowflake.classList.add('snowflake');
+  snowflake.style.left = `${Math.random() * 100}%`;
+  snowflake.style.animationDelay = `${Math.random() * 5}s`;
+  document.querySelector('.snow').appendChild(snowflake);
+  setTimeout(() => {
+    snowflake.remove();
+  }, 5000);
+}
+
+setInterval(createSnowflake, 100);
+
+const snowContainer = document.createElement('div');
+snowContainer.classList.add('snow');
+document.body.appendChild(snowContainer);
+
+
 /* ===== RODAPÉ ===== */
 footer {
   background-color: #1a1a1a;
