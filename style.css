@@ -406,7 +406,7 @@ h1.intro, #typed-hero {
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 50%;
   animation: fall 5s linear infinite;
 }
