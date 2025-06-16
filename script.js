@@ -118,5 +118,26 @@ document.addEventListener("DOMContentLoaded", () => {
         clickSound.play();
       }
     });
+
+
+
+   // Efeito neve 
+
+function createSnowflake() {
+  const snowflake = document.createElement('div');
+  snowflake.classList.add('snowflake');
+  snowflake.style.left = `${Math.random() * 100}%`;
+  snowflake.style.animationDelay = `${Math.random() * 5}s`;
+  document.querySelector('.snow').appendChild(snowflake);
+  setTimeout(() => {
+    snowflake.remove();
+  }, 5000);
+}
+
+setInterval(createSnowflake, 100);
+
+const snowContainer = document.createElement('div');
+snowContainer.classList.add('snow');
+document.body.appendChild(snowContainer);
   });
-});
+}); 
